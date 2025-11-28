@@ -1,6 +1,6 @@
 # Software Testing Phase 2
 
-[![Coverage Status](https://coveralls.io/repos/github/wattero/Software-Testing-Phase-2/badge.svg?branch=main)](https://coveralls.io/github/wattero/Software-Testing-Phase-2?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/wattero/Software-Testing-Phase-2/badge.svg?branch=main)](https://coveralls.io/github/wattero/Software-Testing-Phase-2?branch=main&kill_cache=1)
 [![CI Pipeline](https://github.com/wattero/Software-Testing-Phase-2/actions/workflows/ci.yml/badge.svg)](https://github.com/wattero/Software-Testing-Phase-2/actions/workflows/ci.yml)
 
 ## Purpose of this repository
