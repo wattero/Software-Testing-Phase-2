@@ -1,0 +1,195 @@
+name: 🐞 Bug Report
+description: Report a defect or issue found during testing or use
+title: "[Bug]: "
+labels: ["critical", "P0"]
+assignees: []
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Description
+      description: Brief summary of the defect
+      placeholder: Describe the issue in a few sentences.
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: 📅 Date
+      description: Date of report creation
+      placeholder: e.g. 2025-10-14
+
+  - type: input
+    id: program_name
+    attributes:
+      label: 💻 Name of Program
+      description: The program name where the defect was found
+      placeholder: e.g. Shopping Cart Service
+
+  - type: input
+    id: version
+    attributes:
+      label: 🏷️ Release and Version Number
+      description: Release and version numbers of the program
+      placeholder: e.g. v2.3.1
+
+  - type: input
+    id: configuration
+    attributes:
+      label: ⚙️ Testing Configuration
+      description: Test environment (platform, browser, OS, etc.)
+      placeholder: e.g. Chrome 128 on Windows 11 (Staging)
+
+  - type: dropdown
+    id: report_type
+    attributes:
+      label: 📊 Report Type
+      description: Type of issue
+      options:
+        - Programming error
+        - Design issue
+        - Visual/UI issue
+        - Performance issue
+        - Other
+
+  - type: dropdown
+    id: repeatability
+    attributes:
+      label: 🔁 Repeatability
+      description: Is the problem repeatable and how often?
+      options:
+        - Always
+        - Sometimes
+        - Rarely
+        - Don't know
+
+  - type: dropdown
+    id: criticality
+    attributes:
+      label: ⚠️ Criticality
+      description: Level of impact of the defect
+      options:
+        - Critical
+        - Major
+        - Minor
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🚨 Priority
+      description: Urgency of the fix
+      options:
+        - P0 (Immediate)
+        - P1 (High)
+        - P2 (Medium)
+        - P3 (Low)
+    validations:
+      required: true
+
+  - type: input
+    id: customer_impact
+    attributes:
+      label: 👥 Impact on Customers
+      description: e.g. no action required, technical meetings
+      placeholder: Describe the customer impact if any
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔍 Steps to Reproduce
+      description: Detailed steps to recreate the defect
+      placeholder: |
+        1. Go to login page
+        2. Click "Forgot Password"
+        3. Observe no response
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 🎯 Expected Result
+      description: What should happen under normal behavior
+      placeholder: e.g. A password reset modal should appear.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ Actual Result
+      description: What actually happened
+      placeholder: e.g. Nothing happens, no message displayed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: recommended_fix
+    attributes:
+      label: 🛠️ Recommended Fix
+      description: Suggested fix or developer notes
+      placeholder: e.g. Add missing onClick handler to button.
+
+  - type: input
+    id: responsible
+    attributes:
+      label: 👤 Responsible Person to Fix
+      description: Developer or team assigned to resolve
+      placeholder: e.g. @username or Dev Team A
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: 📌 Status (Lifecycle)
+      description: Current stage of the defect
+      options:
+        - New
+        - Validation
+        - In Progress
+        - Fixed
+        - Verified
+        - Closed
+
+  - type: dropdown
+    id: decision
+    attributes:
+      label: 🧩 Decision
+      description: Filled by project manager
+      options:
+        - Waiting
+        - Fixed
+        - Not possible to repeat
+        - Deferred
+        - Rejected
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: 📎 Attachments / Evidence
+      description: Include screenshots, logs, or videos if applicable
+      placeholder: Drag and drop files or paste image URLs here
+
+  - type: input
+    id: linked_items
+    attributes:
+      label: 🔗 Linked Items
+      description: Related defects, PRs, or test cases
+      placeholder: e.g. #112, #215
+
+  - type: input
+    id: keywords
+    attributes:
+      label: 🏷️ Keywords
+      description: Keywords for easy search and classification
+      placeholder: e.g. cart total, filter, add product
+
+  - type: textarea
+    id: comments
+    attributes:
+      label: 💬 Additional Comments
+      description: Any other notes or neutral observations
+      placeholder: Add any additional context or background info.
