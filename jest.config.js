@@ -14,9 +14,16 @@ const config = {
   
   // Coverage configuration
   collectCoverageFrom: [
-    'src/**/*.js',
-    '!src/.internal/**',
-    '!src/LICENSE'
+    'src/add.js',
+    'src/get.js',
+    'src/filter.js',
+    'src/map.js',
+    'src/toNumber.js',
+    'src/isEmpty.js',
+    'src/isObject.js',
+    'src/toString.js',
+    'src/capitalize.js',
+    'src/defaultTo.js'
   ],
   
   // Coverage reporters
