@@ -54,7 +54,7 @@ Based on the Phase 1 test plan prioritization, the following utility functions a
 |------|-----------|--------|--------|--------|
 | `add.js` | `add.preplanned.test.js` | 8/9 | 1 | ⚠️ Bug found |
 | `add.js` | `add.ai-assisted.test.js` | 63/79 | 16 | ⚠️ Bug found |
-| `capitalize.js` | `capitalize.preplanned.test.js` | 11/11 | 0 | ✅ Pass |
+| `capitalize.js` | `capitalize.preplanned.test.js` | 9/11 | 2 | ⚠️ Bug found |
 | `capitalize.js` | `capitalize.ai-assisted.test.js` | 106/108 | 2 | ⚠️ Bug found |
 | `get.js` | `get.test.js` | 114/114 | 0 | ✅ Pass |
 | `filter.js` | `filter.test.js` | 77/92 | 15 | ⚠️ Bug found |
@@ -65,8 +65,8 @@ Based on the Phase 1 test plan prioritization, the following utility functions a
 | `toString.js` | `toString.test.js` | 80/88 | 8 | ⚠️ Bug found |
 | `defaultTo.js` | `defaultTo.test.js` | 87/94 | 7 | ⚠️ Bug found |
 
-**Total: 1068 passed, 49 failed (1117 tests)**  
-**Test Suites: 6 failed, 6 passed (12 total)**
+**Total: 1066 passed, 51 failed (1117 tests)**  
+**Test Suites: 7 failed, 5 passed (12 total)**
 
 ### Test Methodology
 All tests follow the methodology defined in the Phase 1 test plan:
@@ -76,10 +76,10 @@ All tests follow the methodology defined in the Phase 1 test plan:
 
 ### Known Bugs Found
 - **`add.js`** - String concatenation instead of numeric addition when one or more arguments are strings (e.g., `add("5", 3)` returns `"53"` instead of `8`)
-- **`capitalize.js`** - Issues with certain edge case inputs
+- **`capitalize.js`** - Returns `"Null"` and `"Undefined"` instead of empty string `""` for `null` and `undefined` inputs (converts them to string and capitalizes rather than returning empty string)
 - **`filter.js`** - Returns `[[]]` instead of `[]` when no elements match the predicate (bug in `const result = [[]]` initialization)
 - **`toString.js`** - Returns `"null"` and `"undefined"` strings instead of empty string `""` for null/undefined inputs; throws error on BigInt `0n` and objects with null prototype
-- **`defaultTo.js`** - Incorrect handling of certain default value scenarios
+- **`defaultTo.js`** - Does not return the default value when the first argument is `NaN`; per documentation, `NaN` should be treated like `null` and `undefined` and return the default value
 
 ## CI/CD Pipeline
 
